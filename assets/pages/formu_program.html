@@ -1,93 +1,192 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>programacion</title>
-    <link rel="stylesheet" href="../css/formu_program.css">
-    <script src="https://kit.fontawesome.com/962275a130.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programar Paseo – PasearPerros</title>
+
+  <link rel="icon" href="../../assets/img/logosinfondo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/962275a130.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/formu_program.css">
 </head>
 <body>
 
-    <div id="contenedor">
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <a href="../../index.html" class="site-header__logo">
+      <img src="../../assets/img/logo3empresa.JPG" alt="PasearPerros - Servicio Especialista de Paseo a Mascotas">
+    </a>
 
-        <h1 id="titulo"> Agenda con tu especialista </h1>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-        <form action="#" id="formu"  onsubmit="return false">
-            <div class="menu_info_usuario">              
-                <div class="box_input">
-                    <label for="nombres">Nombres</label>
-                    <input class="check" type="text" name="nombres" id="nombres" placeholder="Ingresa tus Nombres" >
-                    <span id="error1"></span>
-                </div>
-                
-                <div class="box_input">
-                    <label for="apellidos">Apellidos</label>
-                    <input type="text" name="apellidos" id="apellidos" placeholder="Ingresa tus Apellidos" >
-                    <span id="error2"></span>
-                </div>
-                <div class="box_input">
-                    <label for="correo">Correo</label>
-                    <input type="email" name="correo" id="correo" placeholder="Ingresa el correo" >
-                    <span id="error3"></span>
-                </div>
-                <div class="box_input">
-                    <label for="celular">Numero Celular</label>
-                    <input type="number" name="celular" id="celular" placeholder="Ingresa celular" >
-                    <span id="error4"></span>
-                </div>
-                <div class="box_input" >
-                    <label for="especialistas">Especialistas</label>
-                    <select name="" id="especialistas" required>
-                        <option disabled selected="">Seleccione al especialista</option>
-                        <optgroup label="Zona 1">
-                        <option value="1"> 1 - Luis Alvarez - zona 1 </option>
-                        <option value="2"> 2 - Gisell Dominguez - zona 1 </option>
-                        </optgroup>
-                        <optgroup label="Zona 2">
-                        <option value="3"> 3 - Jessica Maria Valbuena - zona 2 </option>
-                        <option value="4"> 4 - Isabella Torrez- zona 2 </option>
-                        </optgroup>
-                        <optgroup label="Zona 3">
-                        <option value="5"> 5 - Oscar Arturo Gonzales zona 3 </option>
-                        <option value="6"> 6 - Gustavo Alarcon vanegas zona 3 </option>
-                        </optgroup>
-                        <optgroup label="Zona 4">
-                        <option value="7"> 7 - Maribel Rosado Fernandez Zona 4</option>
-                        <option value="8"> 8 - Isabella Torrez- Zona 4 </option>
-                        </optgroup>
-                    </select>
-                    <span id="error5"></span>
-                </div>
-                <div class="box_input">
-                    <label for="fecha">Fecha Programada</label>
-                    <input type="date" name="fecha" id="fecha" placeholder="Seleccione fecha" required>
-                    <span id="error6"></span>
-                </div>
+    <nav class="site-header__nav" id="main-nav">
+      <a href="../../index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="cronograma.html">Cronograma</a>
+      <a href="#" class="active">Programar paseo</a>
+    </nav>
+  </header>
 
-                <div class="botonsubmit"  id="submit">
-                    <input type="submit" value="Programar" id="aceptar" >
-                </div>
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <span class="section-label">Agenda tu cita</span>
+      <h1>Programa un Paseo</h1>
+      <p>Completa el formulario y tu especialista estará listo para cuidar a tu mascota.</p>
+    </div>
+  </section>
 
-            </div>
-        </form>
+  <!-- ========== FORM SECTION ========== -->
+  <main class="form-main">
 
-        <!-- <div  class="box" id="error"></div> -->
+    <!-- Formulario -->
+    <div class="form-card" id="form-card">
+      <div class="form-card__icon">
+        <i class="fa-solid fa-calendar-check"></i>
+      </div>
+      <h2>Agenda con tu especialista</h2>
 
+      <form action="#" id="formu" onsubmit="return false" novalidate>
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="nombres">
+              <i class="fa-solid fa-user"></i> Nombres
+            </label>
+            <input type="text" id="nombres" name="nombres" placeholder="Tus nombres" autocomplete="given-name">
+            <span class="field__error" id="error1"></span>
+          </div>
+
+          <div class="field">
+            <label for="apellidos">
+              <i class="fa-solid fa-user"></i> Apellidos
+            </label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" autocomplete="family-name">
+            <span class="field__error" id="error2"></span>
+          </div>
+
+          <div class="field">
+            <label for="correo">
+              <i class="fa-solid fa-envelope"></i> Correo electrónico
+            </label>
+            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+            <span class="field__error" id="error3"></span>
+          </div>
+
+          <div class="field">
+            <label for="celular">
+              <i class="fa-solid fa-mobile-screen-button"></i> Número celular
+            </label>
+            <input type="tel" id="celular" name="celular" placeholder="Ej. 3001234567" autocomplete="tel">
+            <span class="field__error" id="error4"></span>
+          </div>
+
+          <div class="field field--full">
+            <label for="especialistas">
+              <i class="fa-solid fa-user-tie"></i> Especialista preferido
+            </label>
+            <select id="especialistas" name="especialistas" required>
+              <option value="" disabled selected>— Selecciona un especialista —</option>
+              <optgroup label="Zona 1">
+                <option value="1">1 – Luis Alvarez – Zona 1</option>
+                <option value="2">2 – Gisell Dominguez – Zona 1</option>
+              </optgroup>
+              <optgroup label="Zona 2">
+                <option value="3">3 – Jessica Maria Valbuena – Zona 2</option>
+                <option value="4">4 – Isabella Torrez – Zona 2</option>
+              </optgroup>
+              <optgroup label="Zona 3">
+                <option value="5">5 – Oscar Arturo Gonzales – Zona 3</option>
+                <option value="6">6 – Gustavo Alarcon Vanegas – Zona 3</option>
+              </optgroup>
+              <optgroup label="Zona 4">
+                <option value="7">7 – Maribel Rosado Fernandez – Zona 4</option>
+                <option value="8">8 – Isabella Torrez – Zona 4</option>
+              </optgroup>
+            </select>
+            <span class="field__error" id="error5"></span>
+          </div>
+
+          <div class="field field--full">
+            <label for="fecha">
+              <i class="fa-solid fa-calendar-day"></i> Fecha del paseo
+            </label>
+            <input type="date" id="fecha" name="fecha" required>
+            <span class="field__error" id="error6"></span>
+          </div>
+
+        </div>
+
+        <button type="button" id="aceptar" class="btn btn--primary form-submit">
+          <i class="fa-solid fa-paper-plane"></i> Confirmar Programación
+        </button>
+      </form>
     </div>
 
-    <div class="box dashed oculto">
-        <i class="fa-solid fa-circle-check" style="color: #31a033;"></i>
-         <h3> Programacion Lista </h3>
-         <br>
-
+    <!-- Confirmación (oculto hasta enviar) -->
+    <div class="form-success oculto" id="form-success">
+      <div class="form-success__icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h2>¡Programación Lista!</h2>
+      <p>Tu cita ha sido registrada exitosamente. En breve serás redirigido al cronograma.</p>
+      <div class="form-success__details" id="success-details"></div>
+      <div class="form-success__loader">
+        <span></span><span></span><span></span>
+      </div>
     </div>
-    <br>
-    
-    <div></div>
 
-    <script src="../js/formulario.js"></script>    
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="../../assets/img/logosinfondo.png" alt="PasearPerros" class="site-footer__logo">
+        <p>Cuidamos a tu mejor amigo con amor, responsabilidad y profesionalismo.</p>
+      </div>
+      <div class="site-footer__col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="cronograma.html">Cronograma</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4>Síguenos</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; 2025 PasearPerros &mdash; Todos los derechos reservados &mdash; Desarrollado por MeliiG</p>
+    </div>
+  </footer>
+
+  <script src="../js/formulario.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mainNav   = document.getElementById('main-nav');
+    if (hamburger && mainNav) {
+      hamburger.addEventListener('click', () => {
+        const open = mainNav.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', String(open));
+      });
+    }
+    const siteHeader = document.getElementById('site-header');
+    window.addEventListener('scroll', () => siteHeader.classList.toggle('scrolled', window.scrollY > 40));
+  </script>
 </body>
 </html>

@@ -1,38 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronograma de Especialistas</title>
-    <link rel="stylesheet" href="../css/cronograma.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronograma de Especialistas – PasearPerros</title>
+
+  <link rel="icon" href="../../assets/img/logosinfondo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/962275a130.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/cronograma.css">
 </head>
-
 <body>
-    <div class="container">
-        <a href="../../index.html" class="volver-inicio-btn">Inicio</a>
-        <a href="formu_program.html" class="volver-btn">Programar - Especialista</a>
-        <h1>Cronograma de Especialistas</h1>
-        <form id="form">
-            <label for="especialistas">Selecciona un Especialista:</label>
-            <select id="especialistas">
-                <option value="1">1 - Luis Alvarez</option>
-                <option value="2">2 - Gisell Dominguez</option>
-                <option value="3">3 - Jessica Maria Valbuena</option>
-                <option value="4">4 - Isabella Torrez</option>
-                <option value="5">5 - Oscar Arturo Gonzales</option>
-                <option value="6">6 - Gustavo Alarcon vanegas</option>
-                <option value="7">7 - Maribel Rosado Fernandez</option>
-                <option value="8">8 - Isabella Torrez</option>
-            </select>
-            <br><br>
-            <button type="submit">Mostrar Cronograma</button>
-        </form>
-        <div id="cronograma"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <a href="../../index.html" class="site-header__logo">
+      <img src="../../assets/img/logo3empresa.JPG" alt="PasearPerros - Servicio Especialista de Paseo a Mascotas">
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-header__nav" id="main-nav">
+      <a href="../../index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="#" class="active">Cronograma</a>
+      <a href="formu_program.html">Programar paseo</a>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <span class="section-label">Disponibilidad</span>
+      <h1>Cronograma de Especialistas</h1>
+      <p>Consulta los horarios y citas programadas de nuestro equipo de paseadores.</p>
     </div>
-    <script src="../js/cronograma.js"></script>
+  </section>
+
+  <!-- ========== CONTENIDO ========== -->
+  <main class="crono-main">
+    <div class="crono-card">
+      <div class="crono-card__header">
+        <i class="fa-solid fa-calendar-days"></i>
+        <h2>Consultar citas por especialista</h2>
+      </div>
+
+      <form id="form" class="crono-form">
+        <div class="crono-form__group">
+          <label for="especialistas">
+            <i class="fa-solid fa-user-tie"></i> Selecciona un Especialista
+          </label>
+          <select id="especialistas">
+            <option value="" disabled selected>— Elige un especialista —</option>
+            <optgroup label="Zona 1">
+              <option value="1">1 – Luis Alvarez</option>
+              <option value="2">2 – Gisell Dominguez</option>
+            </optgroup>
+            <optgroup label="Zona 2">
+              <option value="3">3 – Jessica Maria Valbuena</option>
+              <option value="4">4 – Isabella Torrez</option>
+            </optgroup>
+            <optgroup label="Zona 3">
+              <option value="5">5 – Oscar Arturo Gonzales</option>
+              <option value="6">6 – Gustavo Alarcon Vanegas</option>
+            </optgroup>
+            <optgroup label="Zona 4">
+              <option value="7">7 – Maribel Rosado Fernandez</option>
+              <option value="8">8 – Isabella Torrez</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--primary crono-submit">
+          <i class="fa-solid fa-magnifying-glass"></i> Mostrar Cronograma
+        </button>
+      </form>
+
+      <div id="cronograma" class="crono-result"></div>
+
+      <div class="crono-card__footer">
+        <a href="formu_program.html" class="btn btn--secondary">
+          <i class="fa-solid fa-calendar-plus"></i> Programar nueva cita
+        </a>
+        <a href="catalogo.html" class="btn btn--outline-brand">
+          <i class="fa-solid fa-arrow-left"></i> Volver al catálogo
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="../../assets/img/logosinfondo.png" alt="PasearPerros" class="site-footer__logo">
+        <p>Cuidamos a tu mejor amigo con amor, responsabilidad y profesionalismo.</p>
+      </div>
+      <div class="site-footer__col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="formu_program.html">Programar paseo</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4>Síguenos</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; 2025 PasearPerros &mdash; Todos los derechos reservados &mdash; Desarrollado por MeliiG</p>
+    </div>
+  </footer>
+
+  <script src="../js/cronograma.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mainNav   = document.getElementById('main-nav');
+    if (hamburger && mainNav) {
+      hamburger.addEventListener('click', () => {
+        const open = mainNav.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', String(open));
+      });
+    }
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
+  </script>
 </body>
-
 </html>
-

@@ -1,0 +1,194 @@
+/* =====================================================
+   UBICACION.CSS – Página de Ubicación/Mapa
+   ===================================================== */
+
+/* ---- Page Hero ---- */
+.page-hero {
+  margin-top: var(--header-h);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.page-hero__inner { max-width: var(--max-width); margin: 0 auto; }
+.page-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--color-dark);
+  margin: .5rem 0 .75rem;
+}
+.page-hero p {
+  color: var(--color-dark);
+  opacity: .75;
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ---- Main ---- */
+.ubicacion-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+}
+
+/* ---- Zones Grid ---- */
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.zone-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.zone-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.zone-card__icon {
+  width: 56px;
+  height: 56px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto .9rem;
+  font-size: 1.4rem;
+  color: var(--color-accent-dark);
+  transition: transform var(--transition);
+}
+.zone-card:hover .zone-card__icon { transform: scale(1.1) rotate(-5deg); }
+
+.zone-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--color-dark);
+  margin-bottom: .4rem;
+}
+
+.zone-card p {
+  font-size: .85rem;
+  color: var(--color-text-light);
+  margin-bottom: .6rem;
+}
+
+.zone-card__specialists {
+  display: inline-block;
+  background: var(--color-bg-light);
+  color: var(--color-accent-dark);
+  font-size: .75rem;
+  font-weight: 700;
+  padding: .2em .8em;
+  border-radius: 50px;
+  letter-spacing: .05em;
+}
+
+/* ---- Map Wrapper ---- */
+.map-wrapper {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.map-header {
+  padding: 1.75rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  flex-wrap: wrap;
+}
+
+.map-header i {
+  font-size: 1.6rem;
+  color: var(--color-accent);
+}
+
+.map-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-dark);
+  margin-right: auto;
+}
+
+.map-header p {
+  width: 100%;
+  font-size: .88rem;
+  color: var(--color-text-light);
+  margin-top: -.3rem;
+  padding-left: 2.5rem;
+}
+
+/* ---- Map Placeholder ---- */
+.map-placeholder {
+  background: linear-gradient(135deg, #fdf4ed 0%, #fce8d5 100%);
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.map-placeholder__inner {
+  text-align: center;
+  max-width: 440px;
+}
+
+.map-placeholder__inner i {
+  font-size: 4rem;
+  color: var(--color-accent);
+  opacity: .5;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.map-placeholder__inner h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-dark);
+  margin-bottom: .6rem;
+}
+
+.map-placeholder__inner p {
+  color: var(--color-text-light);
+  font-size: .9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Real map div (when API key is set) */
+#map {
+  height: 420px;
+  width: 100%;
+}
+
+/* ---- CTA ---- */
+.ubicacion-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .ubicacion-main { padding: 2.5rem 1rem 4rem; }
+  .map-header { padding: 1.25rem 1.25rem; }
+  .map-header p { padding-left: 0; }
+  .map-placeholder { min-height: 280px; }
+  .ubicacion-cta .btn { width: 100%; justify-content: center; }
+}

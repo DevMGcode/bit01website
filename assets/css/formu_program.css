@@ -1,164 +1,235 @@
+/* =====================================================
+   FORMU_PROGRAM.CSS – Página de Formulario
+   ===================================================== */
 
-*{
-    padding: 7px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: sans-serif;
+/* ---- Page Hero ---- */
+.page-hero {
+  margin-top: var(--header-h);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
 }
-#formu {
-    margin-top: 2px;
-    margin-bottom: 20px; /* Establece el margen en la parte inferior del formulario */
+.page-hero__inner { max-width: var(--max-width); margin: 0 auto; }
+.page-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--color-dark);
+  margin: .5rem 0 .75rem;
 }
-
-body{
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../img/collagedogs.png);
-    background-size: cover;
-    /* border: 1px solid #aa1414; */
-}
-
-#contenedor{
-
-    width: 100%;
-    max-width:650px;
-    background-color:  #ffc7a19e;
-    padding: 28px;
-    border-radius: 10px;
-    box-shadow: inset -2px 2px 2px rgba(138, 94, 10, 0.958)
+.page-hero p {
+  color: var(--color-dark);
+  opacity: .75;
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
-#titulo{
-
-    font-size: 26px;
-    font-weight: 600;
-    text-align: center;
-    padding-bottom: 6px;
-    color: rgb(131, 72, 16);
-    text-shadow: 1px 1px 1px rgb(59, 24, 5);
-    border-bottom: solid 2px rgb(130, 65, 20);
-}
-/* Estilo para el spinner */
-.spinner {
-    text-align: center;
-    color: #31a033;
+/* ---- Main (collagedogs.png como fondo) ---- */
+.form-main {
+  min-height: 60vh;
+  padding: 4rem 1.5rem 5rem;
+  background-image: url('../img/collagedogs.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.spinner i {
-    font-size: 50px;
-}
-.oculto {
-    display: none;
-}
-
-
-
-
-
-
-.menu_info_usuario{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px 0;
+.form-main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(253, 248, 244, 0.87);
+  backdrop-filter: blur(3px);
 }
 
-.box_input:nth-child(2n){
-    justify-content: end;
+.form-card,
+.form-success {
+  position: relative;
+  z-index: 1;
 }
 
-.box_input{
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    padding-bottom: 15px;
+/* ---- Form Card ---- */
+.form-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 3rem 3rem 2.5rem;
+  width: 100%;
+  max-width: 700px;
 }
 
-.box_input label{
-    width: 95%;
-    color: rgb(133, 72, 7);
-    font-size: 20px;
-    font-weight: 400;
-    margin: 5px 0 ;
+.form-card__icon {
+  width: 70px;
+  height: 70px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--color-accent-dark);
+  margin: 0 auto 1.5rem;
 }
 
-.box_input input{
-    visibility: visible;
-    height: 40px;
-    width: 95%;
-    border-radius: 7px;
-    outline: none;
-    border: 2px solid rgb(93, 60, 13);
-    padding: 0 10px;
+.form-card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--color-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid var(--color-primary);
 }
 
-
-
-#especialistas,
-#fecha,
-.botonsubmit input{
-    cursor: pointer;
+/* ---- Grid ---- */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
 }
 
-.botonsubmit{
-    margin-top: 40px;
+.field { display: flex; flex-direction: column; gap: .4rem; }
+.field--full { grid-column: 1 / -1; }
+
+.field label {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.field label i { color: var(--color-accent); font-size: .82rem; }
+
+.field input,
+.field select {
+  padding: .7rem 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: .95rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-white);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-.botonsubmit input{
-
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    color: rgb(240, 197, 150);
-    background-color: rgb(162, 117, 63);
+.field input:focus,
+.field select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(235,127,59,.15);
 }
 
-.botonsubmit input:hover{
-    background-color: rgb(29, 19, 2);
+.field input.is-valid   { border-color: #2a9e3a; box-shadow: 0 0 0 3px rgba(42,158,58,.12); }
+.field input.is-invalid { border-color: #d9381e; box-shadow: 0 0 0 3px rgba(217,56,30,.12); }
+
+.field select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23777' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
 }
 
-@media (max-width:600px) {
-    #contenedor{
-        min-width: 280px;
-    }
-
-    .box_input{
-    margin-bottom: 12px;
-    width: 100%;
-    }
-
-    .box_input:nth-child(2n){
-        justify-content: space-between;
-    }
-
-    .menu_info_usuario{
-        max-height: 380px;
-        overflow: auto;
-    }
-
-    .menu_info_usuario::-webkit-scrollbar{
-        width: 0;
-    }
+.field__error {
+  font-size: .78rem;
+  color: #d9381e;
+  min-height: 1em;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
 }
 
-.box{
-    margin-top: 40px;
-    background: rgba(255, 253, 247, 0.532);
-    padding: 1%;
-    border-radius: 5%;
-    
-}
-.box i{
-    text-align: center;
-    font-size: 30px;
-    margin-left: 72px;
-    margin-bottom: 11px;
+/* ---- Submit ---- */
+.form-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 1em 2em;
+  font-size: 1.05rem;
 }
 
+/* ---- Oculto ---- */
+.oculto { display: none !important; }
+
+/* ---- Success card ---- */
+.form-success {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.form-success__icon {
+  font-size: 4rem;
+  color: #2a9e3a;
+  margin-bottom: 1.25rem;
+  animation: popIn .5s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.form-success h2 {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  color: var(--color-dark);
+  margin-bottom: .6rem;
+}
+
+.form-success p {
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.form-success__details {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: left;
+  font-size: .9rem;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.form-success__details p { margin-bottom: .4rem; }
+.form-success__details p:last-child { margin-bottom: 0; }
+.form-success__details strong { color: var(--color-dark); }
+
+/* Loader dots */
+.form-success__loader {
+  display: flex;
+  justify-content: center;
+  gap: .4rem;
+}
+.form-success__loader span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  animation: dot-blink 1.2s infinite;
+}
+.form-success__loader span:nth-child(2) { animation-delay: .2s; }
+.form-success__loader span:nth-child(3) { animation-delay: .4s; }
+
+@keyframes dot-blink {
+  0%, 80%, 100% { opacity: .2; transform: scale(.9); }
+  40%            { opacity: 1;  transform: scale(1.2); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .form-card { padding: 2rem 1.25rem; }
+  .form-grid { grid-template-columns: 1fr; }
+  .field--full { grid-column: auto; }
+}

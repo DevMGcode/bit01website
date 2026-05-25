@@ -1,156 +1,318 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo</title>
-    <link rel="stylesheet" href="../css/estilos2catalogo.css">
-    <script src="https://kit.fontawesome.com/962275a130.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300&display=swap" rel="stylesheet">
-    <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de paseadores especialistas de PasearPerros. Encuentra el profesional más cercano a ti.">
+  <title>Catálogo de Especialistas – PasearPerros</title>
+
+  <link rel="icon" href="../../assets/img/logosinfondo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/962275a130.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/catalogo.css">
 </head>
-    
-    
 <body>
 
-  <!--   Inicio del contenedor -->
-    
-    <div id="contenedor">
-        <!--   Inicio Cabecera -->
-        <header id="header">
-            <div class="logo">
-                <h1>Catalogo</h1>
-            </div>
-            <nav id="menu">
-                <ul>
-                    <li><a href="../../index.html">Inicio</a></li>
-                    <li><a href="#">Catalogo</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!--   fin Cabecera -->
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <a href="../../index.html" class="site-header__logo">
+      <img src="../../assets/img/logo3empresa.JPG" alt="PasearPerros - Servicio Especialista de Paseo a Mascotas">
+    </a>
 
-        <!-- inicio contenido -->
-        <section id="contenedor2">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-            <aside id="aside">
-                <h2>Estos son  nuestros servicios</h2>
-                <ul>
-                    <li><a href="#">Perfil</a></li>
-                    <li><a href="#">Razas</a></li>
-                    <li><a href="../pages/ubicacion.html">ubicacion</a></li>
-                    <li><a href="../pages/formu_program.html">Programacion</a></li>
-                </ul>
-            </aside>
+    <nav class="site-header__nav" id="main-nav">
+      <a href="../../index.html">Inicio</a>
+      <a href="#" class="active">Catálogo</a>
+      <a href="../../index.html#nosotros">Nosotros</a>
+      <a href="formu_program.html">Programar paseo</a>
+    </nav>
+  </header>
 
-            <div id="contenedor_cuadricula">
-
-                <article class="card">
-                    <div class="imagen_wrap">
-                        <img src="https://via.placeholder.com/250x180/" alt="">
-                    </div>
-                    <div class="card_info">
-                        <a href="">Paseador Especialista</a>
-                        <p> Zona 1</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="imagen_wrap">
-                        <img src="https://via.placeholder.com/250x180/" alt="">
-                    </div>
-                    <div class="card_info">
-                        <a href="">Paseador Especialista</a>
-                        <p> Zona 2</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="imagen_wrap">
-                        <img src="https://via.placeholder.com/250x180/" alt="">
-                    </div>
-                    <div class="card_info">
-                        <a href="">Paseador Especialista</a>
-                        <p> Zona 3</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="imagen_wrap">
-                        <img src="https://via.placeholder.com/250x180/" alt="">
-                    </div>
-                    <div class="card_info">
-                        <a href="">Paseador Especialista</a>
-                        <p> Zona 4</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="imagen_wrap">
-                        <img src="https://via.placeholder.com/250x180/" alt="">
-                    </div>
-                    <div class="card_info">
-                        <a href="">Paseador Especialista</a>
-                        <p> Zona 1</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="imagen_wrap">
-                        <img src="https://via.placeholder.com/250x180/" alt="">
-                    </div>
-                    <div class="card_info">
-                        <a href="">Paseador Especialista</a>
-                        <p> Zona 2</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="imagen_wrap">
-                        <img src="https://via.placeholder.com/250x180/" alt="">
-                    </div>
-                    <div class="card_info">
-                        <a href="">Paseador Especialista</a>
-                        <p> Zona 3</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="imagen_wrap">
-                        <img src="https://via.placeholder.com/250x180/" alt="">
-                    </div>
-                    <div class="card_info">
-                        <a href="">Paseador Especialista</a>
-                        <p> Zona 4</p>
-                    </div>
-                </article>
-
-            </div>
-
-        </section>
-        <!-- fin contenido -->
-
-        <footer id="footer">
-            <div class="logo">
-                NUESTROS ESPECIALISTAS
-            </div>
-
-            <div class="info">
-                Pasea Perros&copy
-            </div>
-
-        </footer>
-
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <span class="section-label">Nuestro equipo</span>
+      <h1>Catálogo de Especialistas</h1>
+      <p>Encuentra al paseador certificado más cercano a tu zona y agenda hoy mismo.</p>
     </div>
-    <!--   Fin del contenedor -->
+  </section>
+
+  <!-- ========== CONTENIDO PRINCIPAL ========== -->
+  <div class="catalog-layout">
+
+    <!-- Sidebar -->
+    <aside class="catalog-sidebar">
+      <h2>Filtrar por servicio</h2>
+      <ul class="sidebar-links">
+        <li><a href="#" class="sidebar-link active"><i class="fa-solid fa-paw"></i> Todos</a></li>
+        <li><a href="#zona1" class="sidebar-link"><i class="fa-solid fa-location-dot"></i> Zona 1</a></li>
+        <li><a href="#zona2" class="sidebar-link"><i class="fa-solid fa-location-dot"></i> Zona 2</a></li>
+        <li><a href="#zona3" class="sidebar-link"><i class="fa-solid fa-location-dot"></i> Zona 3</a></li>
+        <li><a href="#zona4" class="sidebar-link"><i class="fa-solid fa-location-dot"></i> Zona 4</a></li>
+      </ul>
+
+      <div class="sidebar-cta">
+        <h3>¿Listo para agendar?</h3>
+        <p>Programa el paseo de tu mascota en minutos.</p>
+        <a href="formu_program.html" class="btn btn--primary" style="width:100%;justify-content:center;margin-top:.75rem">
+          <i class="fa-solid fa-calendar-check"></i> Agendar paseo
+        </a>
+      </div>
+
+      <div class="sidebar-cta" style="margin-top:1rem;">
+        <h3><i class="fa-solid fa-calendar-days"></i> Cronograma</h3>
+        <p>Revisa la disponibilidad de cada especialista.</p>
+        <a href="cronograma.html" class="btn btn--secondary" style="width:100%;justify-content:center;margin-top:.75rem">
+          Ver cronograma
+        </a>
+      </div>
+    </aside>
+
+    <!-- Grid de tarjetas -->
+    <main class="catalog-grid">
+
+      <!-- ZONA 1 -->
+      <div class="zone-label" id="zona1">
+        <i class="fa-solid fa-location-dot"></i> Zona 1
+      </div>
+
+      <article class="specialist-card">
+        <div class="specialist-card__img">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Luis Alvarez" loading="lazy">
+          <span class="badge badge--available">Disponible</span>
+        </div>
+        <div class="specialist-card__body">
+          <h3>Luis Alvarez</h3>
+          <p class="specialist-card__zone"><i class="fa-solid fa-location-dot"></i> Zona 1</p>
+          <p class="specialist-card__desc">Especialista en razas grandes. 3 años de experiencia en paseos grupales e individuales.</p>
+          <div class="specialist-card__rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            <span>4.0</span>
+          </div>
+          <a href="formu_program.html" class="btn btn--primary specialist-card__btn">
+            <i class="fa-solid fa-calendar-plus"></i> Agendar
+          </a>
+        </div>
+      </article>
+
+      <article class="specialist-card">
+        <div class="specialist-card__img">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Gisell Dominguez" loading="lazy">
+          <span class="badge badge--available">Disponible</span>
+        </div>
+        <div class="specialist-card__body">
+          <h3>Gisell Dominguez</h3>
+          <p class="specialist-card__zone"><i class="fa-solid fa-location-dot"></i> Zona 1</p>
+          <p class="specialist-card__desc">Amante de los animales con entrenamiento en primeros auxilios para mascotas.</p>
+          <div class="specialist-card__rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span>5.0</span>
+          </div>
+          <a href="formu_program.html" class="btn btn--primary specialist-card__btn">
+            <i class="fa-solid fa-calendar-plus"></i> Agendar
+          </a>
+        </div>
+      </article>
+
+      <!-- ZONA 2 -->
+      <div class="zone-label" id="zona2">
+        <i class="fa-solid fa-location-dot"></i> Zona 2
+      </div>
+
+      <article class="specialist-card">
+        <div class="specialist-card__img">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica Maria Valbuena" loading="lazy">
+          <span class="badge badge--busy">Ocupada</span>
+        </div>
+        <div class="specialist-card__body">
+          <h3>Jessica M. Valbuena</h3>
+          <p class="specialist-card__zone"><i class="fa-solid fa-location-dot"></i> Zona 2</p>
+          <p class="specialist-card__desc">Especialista en cachorros y razas pequeñas. Paseos con seguimiento GPS.</p>
+          <div class="specialist-card__rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            <span>4.2</span>
+          </div>
+          <a href="formu_program.html" class="btn btn--primary specialist-card__btn">
+            <i class="fa-solid fa-calendar-plus"></i> Agendar
+          </a>
+        </div>
+      </article>
+
+      <article class="specialist-card">
+        <div class="specialist-card__img">
+          <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Isabella Torrez" loading="lazy">
+          <span class="badge badge--available">Disponible</span>
+        </div>
+        <div class="specialist-card__body">
+          <h3>Isabella Torrez</h3>
+          <p class="specialist-card__zone"><i class="fa-solid fa-location-dot"></i> Zona 2</p>
+          <p class="specialist-card__desc">Técnica en comportamiento animal, experta en adiestramiento durante el paseo.</p>
+          <div class="specialist-card__rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            <span>4.5</span>
+          </div>
+          <a href="formu_program.html" class="btn btn--primary specialist-card__btn">
+            <i class="fa-solid fa-calendar-plus"></i> Agendar
+          </a>
+        </div>
+      </article>
+
+      <!-- ZONA 3 -->
+      <div class="zone-label" id="zona3">
+        <i class="fa-solid fa-location-dot"></i> Zona 3
+      </div>
+
+      <article class="specialist-card">
+        <div class="specialist-card__img">
+          <img src="https://randomuser.me/api/portraits/men/57.jpg" alt="Oscar Arturo Gonzales" loading="lazy">
+          <span class="badge badge--available">Disponible</span>
+        </div>
+        <div class="specialist-card__body">
+          <h3>Oscar A. Gonzales</h3>
+          <p class="specialist-card__zone"><i class="fa-solid fa-location-dot"></i> Zona 3</p>
+          <p class="specialist-card__desc">5 años de experiencia en paseos nocturnos y de fin de semana para todas las razas.</p>
+          <div class="specialist-card__rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            <span>4.1</span>
+          </div>
+          <a href="formu_program.html" class="btn btn--primary specialist-card__btn">
+            <i class="fa-solid fa-calendar-plus"></i> Agendar
+          </a>
+        </div>
+      </article>
+
+      <article class="specialist-card">
+        <div class="specialist-card__img">
+          <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Gustavo Alarcon Vanegas" loading="lazy">
+          <span class="badge badge--available">Disponible</span>
+        </div>
+        <div class="specialist-card__body">
+          <h3>Gustavo Alarcon V.</h3>
+          <p class="specialist-card__zone"><i class="fa-solid fa-location-dot"></i> Zona 3</p>
+          <p class="specialist-card__desc">Veterinario de profesión. Paseos con atención especial a mascotas mayores o con condiciones.</p>
+          <div class="specialist-card__rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span>4.9</span>
+          </div>
+          <a href="formu_program.html" class="btn btn--primary specialist-card__btn">
+            <i class="fa-solid fa-calendar-plus"></i> Agendar
+          </a>
+        </div>
+      </article>
+
+      <!-- ZONA 4 -->
+      <div class="zone-label" id="zona4">
+        <i class="fa-solid fa-location-dot"></i> Zona 4
+      </div>
+
+      <article class="specialist-card">
+        <div class="specialist-card__img">
+          <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Maribel Rosado Fernandez" loading="lazy">
+          <span class="badge badge--available">Disponible</span>
+        </div>
+        <div class="specialist-card__body">
+          <h3>Maribel Rosado F.</h3>
+          <p class="specialist-card__zone"><i class="fa-solid fa-location-dot"></i> Zona 4</p>
+          <p class="specialist-card__desc">Especialista en socialización canina y paseos con refuerzo positivo para todos los temperamentos.</p>
+          <div class="specialist-card__rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            <span>4.7</span>
+          </div>
+          <a href="formu_program.html" class="btn btn--primary specialist-card__btn">
+            <i class="fa-solid fa-calendar-plus"></i> Agendar
+          </a>
+        </div>
+      </article>
+
+      <article class="specialist-card">
+        <div class="specialist-card__img">
+          <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Isabella Torrez Zona 4" loading="lazy">
+          <span class="badge badge--busy">Ocupada</span>
+        </div>
+        <div class="specialist-card__body">
+          <h3>Isabella Torrez</h3>
+          <p class="specialist-card__zone"><i class="fa-solid fa-location-dot"></i> Zona 4</p>
+          <p class="specialist-card__desc">Paseos de mañana y tarde con reporte fotográfico incluido. Acepta múltiples mascotas.</p>
+          <div class="specialist-card__rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            <span>4.3</span>
+          </div>
+          <a href="formu_program.html" class="btn btn--primary specialist-card__btn">
+            <i class="fa-solid fa-calendar-plus"></i> Agendar
+          </a>
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="../../assets/img/logosinfondo.png" alt="PasearPerros" class="site-footer__logo">
+        <p>Cuidamos a tu mejor amigo con amor, responsabilidad y profesionalismo.</p>
+      </div>
+      <div class="site-footer__col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="../../index.html#nosotros">Nosotros</a></li>
+          <li><a href="formu_program.html">Programar paseo</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4>Síguenos</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; 2025 PasearPerros &mdash; Todos los derechos reservados &mdash; Desarrollado por MeliiG</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mainNav   = document.getElementById('main-nav');
+    if (hamburger && mainNav) {
+      hamburger.addEventListener('click', () => {
+        const open = mainNav.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', String(open));
+      });
+    }
+    // Header scroll
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
+    // Back to top
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    // Sidebar active link
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>

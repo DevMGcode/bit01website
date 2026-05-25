@@ -1,25 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interactivo</title>
-    <style>
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubicación – PasearPerros</title>
+
+  <link rel="icon" href="../../assets/img/logosinfondo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/962275a130.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ubicacion.css">
 </head>
-
 <body>
-    <div id="map"></div>
 
-    <script src="../js/ubicacion.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&libraries=places&callback=initMap"></script>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <a href="../../index.html" class="site-header__logo">
+      <img src="../../assets/img/logo3empresa.JPG" alt="PasearPerros - Servicio Especialista de Paseo a Mascotas">
+    </a>
 
-    
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-header__nav" id="main-nav">
+      <a href="../../index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="formu_program.html">Programar paseo</a>
+      <a href="#" class="active">Ubicación</a>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <span class="section-label">Encuéntranos</span>
+      <h1>Nuestra Cobertura</h1>
+      <p>Operamos en 4 zonas de la ciudad para estar siempre cerca de tu mascota.</p>
+    </div>
+  </section>
+
+  <!-- ========== CONTENIDO ========== -->
+  <main class="ubicacion-main">
+
+    <!-- Zonas de cobertura -->
+    <div class="zones-grid">
+      <div class="zone-card">
+        <div class="zone-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>Zona 1</h3>
+        <p>Luis Alvarez &amp; Gisell Dominguez</p>
+        <span class="zone-card__specialists">2 especialistas</span>
+      </div>
+      <div class="zone-card">
+        <div class="zone-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>Zona 2</h3>
+        <p>Jessica Valbuena &amp; Isabella Torrez</p>
+        <span class="zone-card__specialists">2 especialistas</span>
+      </div>
+      <div class="zone-card">
+        <div class="zone-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>Zona 3</h3>
+        <p>Oscar Gonzales &amp; Gustavo Alarcon</p>
+        <span class="zone-card__specialists">2 especialistas</span>
+      </div>
+      <div class="zone-card">
+        <div class="zone-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>Zona 4</h3>
+        <p>Maribel Rosado &amp; Isabella Torrez</p>
+        <span class="zone-card__specialists">2 especialistas</span>
+      </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="map-wrapper">
+      <div class="map-header">
+        <i class="fa-solid fa-map"></i>
+        <h2>Mapa Interactivo</h2>
+        <p>Arrastra el marcador para encontrar el especialista más cercano a tu zona.</p>
+      </div>
+
+      <!-- Placeholder mapa (sin API key activa) -->
+      <div class="map-placeholder" id="map-placeholder">
+        <div class="map-placeholder__inner">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <h3>Mapa en configuración</h3>
+          <p>El mapa interactivo estará disponible próximamente.<br>
+          Mientras tanto, contáctanos por WhatsApp para saber si llegamos a tu zona.</p>
+          <a href="https://wa.me/573000000000" class="btn btn--primary" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Contáctanos por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- El mapa real se activa cuando se agrega la API key -->
+      <div id="map" style="display:none;"></div>
+    </div>
+
+    <!-- CTA -->
+    <div class="ubicacion-cta">
+      <a href="formu_program.html" class="btn btn--primary">
+        <i class="fa-solid fa-calendar-check"></i> Programar un paseo
+      </a>
+      <a href="catalogo.html" class="btn btn--secondary">
+        Ver especialistas
+      </a>
+    </div>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="../../assets/img/logosinfondo.png" alt="PasearPerros" class="site-footer__logo">
+        <p>Cuidamos a tu mejor amigo con amor, responsabilidad y profesionalismo.</p>
+      </div>
+      <div class="site-footer__col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="formu_program.html">Programar paseo</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4>Síguenos</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; 2025 PasearPerros &mdash; Todos los derechos reservados &mdash; Desarrollado por MeliiG</p>
+    </div>
+  </footer>
+
+  <script src="../js/ubicacion.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mainNav   = document.getElementById('main-nav');
+    if (hamburger && mainNav) {
+      hamburger.addEventListener('click', () => {
+        const open = mainNav.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', String(open));
+      });
+    }
+    const siteHeader = document.getElementById('site-header');
+    window.addEventListener('scroll', () => siteHeader.classList.toggle('scrolled', window.scrollY > 40));
+  </script>
 </body>
-
 </html>

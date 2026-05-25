@@ -1,0 +1,300 @@
+/* =====================================================
+   CATALOGO.CSS – Página de Catálogo
+   ===================================================== */
+
+/* ---- Page Hero (catálogo usa foto1principal.jpg de fondo) ---- */
+.page-hero {
+  margin-top: var(--header-h);
+  position: relative;
+  padding: 5rem 2rem;
+  text-align: center;
+  background-image: url('../img/foto1principal.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(255,199,161,0.88) 0%,
+    rgba(235,127,59,0.82)  100%);
+}
+
+.page-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--color-dark);
+  margin: .5rem 0 .75rem;
+}
+
+.page-hero p {
+  color: var(--color-dark);
+  opacity: .75;
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ---- Layout ---- */
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  align-items: start;
+}
+
+/* ---- Sidebar ---- */
+.catalog-sidebar {
+  position: sticky;
+  top: calc(var(--header-h) + 1.5rem);
+}
+
+.catalog-sidebar h2 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: 1rem;
+  padding-bottom: .75rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.sidebar-links {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.sidebar-links li { margin-bottom: .4rem; }
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .6rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: .9rem;
+  color: var(--color-text);
+  font-weight: 500;
+  transition: background var(--transition), color var(--transition);
+}
+
+.sidebar-link i { color: var(--color-accent); font-size: .85rem; }
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  background: var(--color-primary);
+  color: var(--color-dark);
+}
+
+.sidebar-cta {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+}
+
+.sidebar-cta h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-dark);
+  margin-bottom: .4rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.sidebar-cta p {
+  font-size: .85rem;
+  color: var(--color-text-light);
+}
+
+/* ---- Grid ---- */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Zone label */
+.zone-label {
+  grid-column: 1 / -1;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 0 .25rem;
+  border-bottom: 2px solid var(--color-primary);
+  margin-top: .5rem;
+}
+
+.zone-label i { color: var(--color-accent); }
+
+/* ---- Specialist Card ---- */
+.specialist-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.specialist-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.specialist-card__img {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: var(--color-bg-light);
+}
+
+.specialist-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.specialist-card:hover .specialist-card__img img {
+  transform: scale(1.06);
+}
+
+/* Badges */
+.badge {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  padding: .25em .75em;
+  border-radius: 50px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.badge--available {
+  background: #d4f5d4;
+  color: #1a7f2e;
+}
+
+.badge--busy {
+  background: #fde8d4;
+  color: #9b4700;
+}
+
+/* Card body */
+.specialist-card__body {
+  padding: 1.25rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: .4rem;
+}
+
+.specialist-card__body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-dark);
+}
+
+.specialist-card__zone {
+  font-size: .8rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+.specialist-card__desc {
+  font-size: .85rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.specialist-card__rating {
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  font-size: .85rem;
+}
+
+.specialist-card__rating i { color: #f5a623; font-size: .8rem; }
+.specialist-card__rating span { margin-left: .3rem; color: var(--color-text-light); }
+
+.specialist-card__btn {
+  margin-top: .75rem;
+  justify-content: center;
+  font-size: .88rem;
+  padding: .6em 1.4em;
+}
+
+/* ---- Back to top (reused from estilos.css) ---- */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition);
+  z-index: 8000;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--color-accent-dark); transform: translateY(-3px); }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+  .catalog-sidebar {
+    position: static;
+  }
+  .sidebar-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin-bottom: 1.25rem;
+  }
+  .sidebar-links li { margin-bottom: 0; }
+}
+
+@media (max-width: 600px) {
+  .catalog-layout { padding: 2rem 1rem 3rem; }
+  .page-hero { padding: 3rem 1rem; }
+}
